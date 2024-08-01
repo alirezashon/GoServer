@@ -31,7 +31,7 @@ func handleAPIRequest(w http.ResponseWriter, r *http.Request) {
 	}
 
 	// Create URL
-	apiURL := "http://10.104.26.112:81/api/viewAsset"
+	apiURL := ""
 	params := url.Values{}
 	params.Set("userId", "3198")
 	params.Set("serial", requestBody.Serial)
