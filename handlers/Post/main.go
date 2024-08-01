@@ -87,7 +87,7 @@ func updateAsset(w http.ResponseWriter, r *http.Request) {
 	requestBody.AllottedTo = "customer@test.ir"
 	requestBody.IsCustomUpdate = true
 
-	apiURL := "http://10.104.26.112:81/api/updateAssetStatus"
+	apiURL := ""
 
 	// Make the request
 	response, err := makeRequest(apiURL, requestBody)
@@ -104,31 +104,6 @@ func updateAsset(w http.ResponseWriter, r *http.Request) {
 	w.Write(response)
 }
 
-// func updateAsset(w http.ResponseWriter, r *http.Request) {
-// 	var requestBody UpdateAssetRequestBody
-// 	err := json.NewDecoder(r.Body).Decode(&requestBody)
-// 	if err != nil {
-// 		http.Error(w, "Internal Server Error", http.StatusInternalServerError)
-// 		return
-// 	}
-
-// 	requestBody.UserID = "3198"
-// 	requestBody.Location = "example-location"
-// 	requestBody.AllottedTo = "customer@test.ir"
-// 	requestBody.IsCustomUpdate = true
-
-// 	apiURL := "http://10.104.26.112:81/api/updateAsset"
-
-// 	response, err := makeRequest(apiURL, requestBody)
-// 	if err != nil {
-// 		http.Error(w, "Internal Server Error", http.StatusInternalServerError)
-// 		return
-// 	}
-
-// 	w.Header().Set("Content-Type", "application/json")
-// 	w.Write(response)
-// }
-
 func linkAsset(w http.ResponseWriter, r *http.Request) {
 	var requestBody LinkAssetRequestBody
 	err := json.NewDecoder(r.Body).Decode(&requestBody)
@@ -139,7 +114,7 @@ func linkAsset(w http.ResponseWriter, r *http.Request) {
 
 	requestBody.UserID = "3198"
 
-	apiURL := "http://10.104.26.112:81/api/linkAsset"
+	apiURL := ""
 
 	response, err := makeRequest(apiURL, requestBody)
 	if err != nil {
@@ -162,7 +137,7 @@ func assetInstallation(w http.ResponseWriter, r *http.Request) {
 	requestBody.UserID = "3198"
 	requestBody.Location = "example-location"
 
-	apiURL := "http://10.104.26.112:81/api/AssetInstallation"
+	apiURL := ""
 
 	response, err := makeRequest(apiURL, requestBody)
 	if err != nil {
