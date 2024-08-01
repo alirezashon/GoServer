@@ -13,7 +13,7 @@ func main() {
 	accessories := "MMD"
 
 	// Create URL with query parameters
-	apiURL := "http://10.104.26.112:81/api/viewAsset"
+	apiURL := ""
 	params := url.Values{}
 	params.Set("userId", "3198")
 	params.Set("status", "Contractor---Round up")
