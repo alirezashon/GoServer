@@ -22,7 +22,7 @@ func linkAsset(w http.ResponseWriter, r *http.Request) {
 	}
 	
 	// Create a new request to the asset API
-	req, err := http.NewRequest("POST", "http://10.104.26.112:81/api/linkAsset", bytes.NewBuffer(body))
+	req, err := http.NewRequest("POST", "", bytes.NewBuffer(body))
 	if err != nil {
 		log.Println("Error creating request:", err)
 		http.Error(w, "Internal Server Error", http.StatusInternalServerError)
